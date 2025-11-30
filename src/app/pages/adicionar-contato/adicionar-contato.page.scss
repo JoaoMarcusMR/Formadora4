@@ -1,0 +1,280 @@
+// Variáveis de Cor Otimizadas para Modo Escuro
+$color-primary-start: #5394ff; // Azul mais claro para Dark Mode (Início do Gradiente)
+$color-primary-end: #3880ff;   // Azul Padrão Ionic (Fim do Gradiente)
+$color-danger: #eb445a;        // Vermelho Padrão Ionic
+$color-secondary: #a8a8a8;     // Cinza suave para labels e textos secundários
+$color-background: #121212;    // Fundo da página
+$color-card-background: #1e1e1e; // Fundo dos cards/formulário
+$color-text-main: #f0f0f0;     // Texto principal claro
+$color-input-bg: #2b2b2b;      // Fundo dos inputs
+$color-border-subtle: #333333;
+
+// Estilos gerais da página
+:host {
+  ion-content {
+    --background: $color-background; 
+  }
+}
+// Variáveis de Cor Otimizadas para Modo Escuro
+$color-primary: #5394ff;     // Azul mais claro para Dark Mode (destaque)
+$color-secondary: #a8a8a8;   // Cinza suave para texto secundário
+$color-success: #4cd964;     // Verde vibrante para "Novo"
+$color-background: #121212;  // Fundo da página (preto puro evita burn-in)
+$color-card-background: #1e1e1e; // Fundo dos cards (um pouco mais claro que o fundo)
+$color-text-main: #f0f0f0;   // Texto principal claro
+$color-border-subtle: #333333; // Linhas divisórias muito sutis
+$color-card-shadow: rgba(0, 0, 0, 0.4); // Sombra mais escura
+
+// Estilos gerais da página
+:host {
+  ion-content {
+    --background: $color-background; 
+  }
+}
+
+// Estilos da Barra de Título
+ion-toolbar {
+  --border-width: 0;
+  --box-shadow: none;
+  --background: $color-card-background; 
+  
+  ion-title {
+    font-weight: 700;
+    color: $color-text-main; 
+  }
+}
+
+// --- Botão "Novo" Melhorado ---
+.secondary-btn {
+  --background: $color-success; 
+  --color: #1e1e1e; // Texto escuro para melhor contraste
+  font-weight: 700;
+  height: 40px;
+  border-radius: 8px;
+  
+  // Sombra mais intensa para dar a sensação de elevação
+  box-shadow: 0 6px 15px rgba($color-success, 0.4); 
+  
+  // Transição para suavizar os efeitos
+  transition: all 0.2s ease-in-out; 
+
+  // Efeito ao Clicar/Pressionar (Botão afunda)
+  &:active {
+    transform: translateY(1px); // Move 1px para baixo
+    box-shadow: 0 3px 8px rgba($color-success, 0.4); // Sombra menor
+  }
+
+  ion-icon {
+    margin-inline-end: 4px;
+    font-size: 1.1em;
+  }
+}
+
+// Estilo do Card Personalizado
+.custom-card {
+  background-color: $color-card-background;
+  padding: 0; 
+  margin-bottom: 25px;
+  border-radius: 16px; 
+  box-shadow: 0 6px 20px $color-card-shadow; 
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $color-text-main;
+    margin: 0;
+    padding: 15px 15px 10px 15px; 
+    border-bottom: 1px solid $color-border-subtle; 
+    
+    ion-icon {
+      font-size: 1.4rem;
+      margin-inline-end: 8px;
+      color: $color-primary;
+    }
+  }
+
+  p {
+    color: $color-secondary;
+    padding: 15px; 
+    margin: 0;
+  }
+}
+
+// Estilos da Lista e Itens
+.list-container {
+  padding: 0;
+  --ion-background-color: $color-card-background;
+
+  .list-item {
+    --padding-start: 15px; 
+    --padding-end: 15px;
+    --inner-padding-end: 10px;
+    --background: $color-card-background;
+
+    border-bottom: 1px solid $color-border-subtle;
+    
+    ion-label {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      
+      h3 {
+        font-weight: 600;
+        font-size: 1.15rem; 
+        color: $color-text-main;
+        margin: 0;
+      }
+      p {
+        font-size: 0.95rem;
+        color: $color-secondary; 
+        margin-top: 2px;
+      }
+    }
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// Estilo do Ícone de Edição
+ion-icon[name="create-outline"] {
+  font-size: 1.3rem;
+  color: $color-secondary !important;
+}
+// Estilos da Barra de Título
+ion-toolbar {
+  --border-width: 0;
+  --box-shadow: none;
+  --background: $color-card-background; 
+
+  ion-title {
+    font-weight: 700;
+    color: $color-text-main;
+  }
+}
+
+// Estilo do Botão de Lista na Toolbar
+.secondary-btn {
+  --background: $color-card-background; // Fundo do botão transparente ou da toolbar
+  --color: $color-secondary; 
+  font-weight: 500;
+  --padding-start: 10px;
+  --padding-end: 10px;
+  border: 1px solid $color-border-subtle; // Borda sutil
+  box-shadow: none;
+
+  ion-icon {
+    margin-inline-end: 4px;
+  }
+}
+
+// Estilo do Card Personalizado
+.custom-card {
+  background-color: $color-card-background;
+  padding: 20px;
+  border-radius: 16px; 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); 
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-text-main;
+    margin-top: 0;
+    margin-bottom: 30px; 
+    padding-bottom: 5px;
+    border-bottom: 1px solid $color-border-subtle; 
+  }
+}
+
+// --- Estilos para Inputs e Itens ---
+ion-item {
+  --inner-border-width: 0;
+  --border-color: transparent;
+  --background: transparent;
+  --padding-start: 0;
+  margin-bottom: 20px;
+
+  ion-label {
+    font-weight: 600;
+    color: $color-secondary;
+    font-size: 1rem;
+  }
+
+  ion-input {
+    --padding-start: 12px;
+    --padding-end: 12px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+    
+    // Fundo do input mais escuro para destaque no Dark Mode
+    background-color: $color-input-bg; 
+    border-radius: 8px; 
+    
+    font-size: 1.05rem;
+    color: $color-text-main; // Texto branco/claro
+    
+    &::placeholder {
+      color: #666; // Placeholder mais escuro que o texto
+      font-weight: 400;
+    }
+  }
+
+  // Efeito ao focar no input
+  &.item-has-focus {
+    ion-input {
+      // Borda colorida ao focar
+      box-shadow: 0 0 0 2px rgba($color-primary-start, 0.4); 
+      background-color: $color-card-background; // Fundo do card ao focar
+    }
+  }
+}
+
+
+// --- Estilos dos Botões de Ação ---
+ion-button {
+  text-transform: uppercase;
+  font-weight: 700;
+  height: 52px;
+  border-radius: 12px; 
+  transition: all 0.3s ease-in-out; 
+
+  ion-icon {
+    font-size: 1.2em;
+  }
+}
+
+// Botão Principal (Salvar/Atualizar) - Estilo Gradiente
+.primary-btn {
+  --background: $color-primary-end; 
+  --background-activated: $color-primary-end;
+  
+  background: linear-gradient(135deg, $color-primary-start 0%, $color-primary-end 100%);
+  
+  margin-top: 35px;
+
+  // Sombra flutuante
+  box-shadow: 0 10px 20px rgba($color-primary-end, 0.4); 
+
+  // Efeito ao Clicar
+  &:active {
+    transform: translateY(2px); 
+    box-shadow: 0 5px 10px rgba($color-primary-end, 0.4); 
+  }
+}
+
+// Botão de Excluir (Danger)
+.danger-btn {
+  --background: $color-danger;
+  --background-activated: darken($color-danger, 10%);
+  --color: white;
+  margin-top: 15px;
+  box-shadow: 0 4px 10px rgba($color-danger, 0.3);
+  
+  // Efeito ao Clicar
+  &:active {
+    transform: translateY(2px); 
+    box-shadow: 0 2px 5px rgba($color-danger, 0.3); 
+  }
+}

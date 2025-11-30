@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Contatos (Firebase)</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/adicionar-contato">
+        <ion-icon name="add-circle-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-list>
+    <app-contato-item *ngFor="let contact of contacts" [contact]="contact"></app-contato-item>
+    
+    <ion-item *ngIf="contacts.length === 0">
+      <ion-label>Nenhum contato encontrado. Adicione um!</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

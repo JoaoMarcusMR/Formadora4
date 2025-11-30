@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar></ion-buttons>
+    <ion-title>Adicionar Contato</ion-title>
+  </ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/listar-contatos"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Adicionar Contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-list>
+    <ion-item>
+      <ion-input 
+        label="Nome" 
+        placeholder="Digite o nome do contato"
+        [(ngModel)]="newContact.name" 
+        required>
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-input 
+        label="E-mail" 
+        placeholder="Digite o email"
+        type="email"
+        [(ngModel)]="newContact.email" 
+        required>
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-button expand="full" class="ion-margin-top" (click)="saveContact()" [disabled]="!newContact.name || !newContact.email">
+    Salvar Contato
+  </ion-button>
+
+</ion-content>

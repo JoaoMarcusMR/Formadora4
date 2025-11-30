@@ -1,0 +1,48 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <!-- Título dinâmico: Se tiver ID é Editar, senão é Novo -->
+    <ion-title>{{ isEdicao ? 'Editar Contato' : 'Novo Contato' }}</ion-title>
+
+    <ion-button slot="end" class="secondary-btn" routerLink="/listar-contatos" routerDirection="back">
+      <ion-icon name="list" slot="start"></ion-icon>
+      Lista
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="custom-card">
+    <h2 class="card-title">
+      {{ isEdicao ? 'Atualizar dados' : 'Preencha os dados' }}
+    </h2>
+
+    <ion-item>
+      <ion-label position="stacked">Nome completo</ion-label>
+      <ion-input [(ngModel)]="contato.nome" placeholder="Ex: João Rodrigues"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">E-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="contato.email" placeholder="Ex: joao@email.com"></ion-input>
+    </ion-item>
+
+    <!-- Botão de Ação Principal (Salvar ou Atualizar) -->
+    <ion-button expand="block" class="primary-btn" (click)="salvar()">
+      <ion-icon slot="start" name="save"></ion-icon>
+      {{ isEdicao ? 'Atualizar Contato' : 'Salvar Contato' }}
+    </ion-button>
+
+    <!-- Botão de Excluir (Só aparece se estiver editando) -->
+    <ion-button
+      *ngIf="isEdicao"
+      expand="block"
+      class="danger-btn"
+      (click)="excluir()">
+      <ion-icon slot="start" name="trash"></ion-icon>
+      Excluir Contato
+    </ion-button>
+
+  </div>
+
+</ion-content>
